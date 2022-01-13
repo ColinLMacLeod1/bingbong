@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/ColinLMacLeod1/bingbong#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
-    "react-helmet": "^6.1.0"
+
   }
 }
