@@ -92,3 +92,5 @@ typings/
 
 # Misc
 .DS_Store
+
+.vercel
