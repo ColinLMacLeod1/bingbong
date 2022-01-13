@@ -10,6 +10,7 @@ import { AnnounceProvider } from "./providers/announce";
 import { ConfigProvider, useConfig } from "./providers/config";
 import { LanguageProvider, useLanguage } from "./providers/language";
 import { AuthProvider, useAuth } from "./providers/auth";
+import { RoomProvider, useRoom } from "./providers/room";
 
 // Pages
 import Landing from "./pages/landing";
@@ -42,7 +43,7 @@ const App = () => {
   const { config } = useConfig();
   const { isLoggedIn } = useAuth();
 
-  logger.debug(config, language, text)
+  logger.debug(config, language, text);
 
   return config && language && text ? (
     <BrowserRouter>
@@ -53,7 +54,11 @@ const App = () => {
           exact={true}
           path={getLangRoutes("profile")}
           render={() =>
-            isLoggedIn ? <Profile /> : <Redirect to={getRoute("login", language)} />
+            isLoggedIn ? (
+              <Profile />
+            ) : (
+              <Redirect to={getRoute("login", language)} />
+            )
           }
         />
         <Route
@@ -82,7 +87,9 @@ ReactDOM.render(
           <ConfigProvider>
             <LanguageProvider>
               <AuthProvider>
-                <App />
+                <RoomProvider>
+                  <App />
+                </RoomProvider>
               </AuthProvider>
             </LanguageProvider>
           </ConfigProvider>

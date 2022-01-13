@@ -3,13 +3,14 @@
     "locale": "CA",
     "text": {
         "header": {
-            "title": "App",
+            "title": "Bing Bong",
             "login": "Log in",
             "logout": "Log out",
             "signup": "Sign up"
         },
         "landing": {
-            "intro": "Welcome to App"
+            "intro": "Welcome to App",
+            "pageTitle": "Bing Bong"
         },
         "login": {
             "loginButton": "Login",
@@ -21,6 +22,9 @@
                     "required": "Password is required"
                 }
             }
+        },
+        "links": {
+            "github": "https://github.com/ColinLMacLeod1/bingbong"
         }
     }
 }

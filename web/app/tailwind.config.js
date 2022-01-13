@@ -26,6 +26,7 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      emerald: colors.emerald,
       info: "#269abc",
       success: "#278400",
       warning: "#ee7100",
@@ -304,6 +305,7 @@ module.exports = {
         '"Courier New"',
         "monospace",
       ],
+      bingbong:  ["Lobster", 'Helvetica', 'Arial', 'sans-serif'],
     },
     fontSize: {
       "3xs": ["12px", { lineHeight: "1rem" }],

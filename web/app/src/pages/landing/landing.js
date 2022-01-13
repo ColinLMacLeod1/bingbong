@@ -1,20 +1,27 @@
-import logo from './img/logo.svg';
-import { useEffect } from 'react';
-import call from "../../util/call"
+import { useEffect } from "react";
+import call from "../../util/call";
+import { useLanguage } from "../../providers/language";
+import { GithubForkBanner } from "react-github-fork-banner";
+import MainFrame from "../../frames/main";
+
+import { IconContext } from "react-icons";
+import { BsStoplights } from "react-icons/bs";
 
 function Landing() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     call("/api/test", "get");
-  }, [])
+  }, []);
 
   return (
-    <div className="App">
-      <header className="grid place-items-center h-screen">
-        <img src={logo} className="w-80" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+    <div className="">
+      <MainFrame title={t("landing.pageTitle")}>
+        <div id="create-join-room">
+          
+
+        </div>
+      </MainFrame>
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
+import _ from "lodash";
 import Logger from "../util/logger";
 const logger = Logger("providers/language");
 
@@ -27,12 +28,17 @@ export const LanguageProvider = ({ children }) => {
     }
   }, [language]);
 
+  const t = useCallback(( path) => {
+    return _.get(text, path, "");
+  }, [text]);
+
   return (
     <LanguageContext.Provider
       value={{
         language,
         text,
         setLanguage,
+        t
       }}
     >
       {children}

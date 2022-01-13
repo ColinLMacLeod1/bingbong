@@ -1,5 +1,11 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'Lobster';
+  src: url(./fonts/Lobster-Regular.ttf);
+}
+
 @tailwind utilities;
 
 body {
