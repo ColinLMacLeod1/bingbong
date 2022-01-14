@@ -30,4 +30,4 @@ const call = (path, method, body) => {
   });
 };
 
-module.exports = call;
+export default call;
